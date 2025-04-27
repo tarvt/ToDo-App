@@ -22,6 +22,7 @@ var collection *mongo.Collection
 func init() {
 	loadTheEnv()
 	createDBInstance()
+
 }
 
 func loadTheEnv() {
@@ -32,7 +33,7 @@ func loadTheEnv() {
 }
 
 func createDBInstance() {
-	connectionString := os.Getenv("DB_URI")
+	connectionString := os.Getenv("MONGODB_URL")
 	dbName := os.Getenv("DB_NAME")
 	collName := os.Getenv("DB_COLLECTION_NAME")
 
